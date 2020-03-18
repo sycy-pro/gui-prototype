@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Codec</class>
+ <widget class="QMainWindow" name="Codec">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>450</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>SYCY Codec</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="globalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="layout1">
+      <item>
+       <widget class="QGroupBox" name="actionsGroupBox">
+        <property name="title">
+         <string>Actions</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QRadioButton" name="actionEncrypt">
+           <property name="text">
+            <string>Encrypt</string>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">actionsButtonGroup</string>
+           </attribute>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="actionDecrypt">
+           <property name="text">
+            <string>Decrypt</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">actionsButtonGroup</string>
+           </attribute>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="filesGroupBox">
+        <property name="title">
+         <string>Files</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="1" column="0">
+          <widget class="QLabel" name="labelDestination">
+           <property name="text">
+            <string>Destination</string>
+           </property>
+           <property name="buddy">
+            <cstring>editDestination</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="editSource">
+           <property name="toolTip">
+            <string>This should be an absolute path</string>
+           </property>
+           <property name="placeholderText">
+            <string>Source file path</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QPushButton" name="browseDestination">
+           <property name="toolTip">
+            <string>Browse directories</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>../../downloads/dir.png</normaloff>../../downloads/dir.png</iconset>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="labelSource">
+           <property name="text">
+            <string>Source</string>
+           </property>
+           <property name="buddy">
+            <cstring>editSource</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QPushButton" name="browseSource">
+           <property name="toolTip">
+            <string>Browse files</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>../../downloads/file.svg</normaloff>../../downloads/file.svg</iconset>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="editDestination">
+           <property name="toolTip">
+            <string>This should be an absolute path</string>
+           </property>
+           <property name="placeholderText">
+            <string>Destination directory</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="layout2">
+      <item>
+       <widget class="QPushButton" name="buttonAction">
+        <property name="text">
+         <string>Start</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QProgressBar" name="progressBar">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="value">
+         <number>0</number>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <tabstops>
+  <tabstop>actionEncrypt</tabstop>
+  <tabstop>actionDecrypt</tabstop>
+  <tabstop>editSource</tabstop>
+  <tabstop>browseSource</tabstop>
+  <tabstop>editDestination</tabstop>
+  <tabstop>browseDestination</tabstop>
+  <tabstop>buttonAction</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="actionsButtonGroup"/>
+ </buttongroups>
+</ui>
